@@ -149,17 +149,27 @@ public class AddSupplierJPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
-       
-        Supplier supplier = supplierDirectory.addSupplier();
-        supplier.setPersonName(txtPatientName.getText());
+      
+   
+           if(txtPatientName.getText().isEmpty() || txtAge.getText().isEmpty() || txtEmail.getText().isEmpty() || txtInsurance.getText().isEmpty()
+                   || txtcity.getText().isEmpty() || txtNumber.getText().isEmpty()){
+                JOptionPane.showMessageDialog(null, "Empty Fields are not allowed" , "Error", JOptionPane.ERROR_MESSAGE);
+            
+        }
+           else{
+                Supplier supplier = supplierDirectory.addSupplier();
+               supplier.setPersonName(txtPatientName.getText()); 
         supplier.setPersonPhone(txtNumber.getText());
         supplier.setPersonEmail(txtEmail.getText());
         supplier.setPersonGender(txtGender.getSelectedValue());
         supplier.setPersonAge(txtAge.getText());
         supplier.setPersonInsurance(txtInsurance.getText());
         supplier.setCity(txtcity.getText());
-        
-          JOptionPane.showMessageDialog(null, "Patient added successfully!!", "Info", JOptionPane.INFORMATION_MESSAGE);     
+         JOptionPane.showMessageDialog(null, "Patient added successfully!!", "Info", JOptionPane.INFORMATION_MESSAGE);  
+           }
+       
+    
+           
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
