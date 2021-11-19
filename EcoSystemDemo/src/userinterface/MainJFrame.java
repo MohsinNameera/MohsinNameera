@@ -114,7 +114,7 @@ public class MainJFrame extends javax.swing.JFrame {
         getContentPane().add(container1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 61, 1200, 750));
 
         loginJPanel.setBackground(new java.awt.Color(0, 0, 0));
-        loginJPanel.setPreferredSize(new java.awt.Dimension(1200, 802));
+        loginJPanel.setPreferredSize(new java.awt.Dimension(1200, 850));
         loginJPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(0, 0, 0));
@@ -217,13 +217,13 @@ public class MainJFrame extends javax.swing.JFrame {
 
         cancelButton.setBackground(new java.awt.Color(255, 255, 255));
         cancelButton.setForeground(new java.awt.Color(255, 255, 255));
-        cancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/cancel.png"))); // NOI18N
+        cancelButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/into1.png"))); // NOI18N
         cancelButton.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 cancelButtonMousePressed(evt);
             }
         });
-        loginJPanel.add(cancelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1150, 10, 40, 30));
+        loginJPanel.add(cancelButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(1160, 10, 30, 30));
 
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Uber-Eats-Transparent - Copy.png"))); // NOI18N
