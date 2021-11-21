@@ -154,6 +154,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         userNameJTextField1.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(31, 50, 97)));
         userNameJTextField1.setCaretColor(new java.awt.Color(255, 255, 255));
+        userNameJTextField1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         userNameJTextField1.setDisabledTextColor(new java.awt.Color(16, 10, 55));
         userNameJTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

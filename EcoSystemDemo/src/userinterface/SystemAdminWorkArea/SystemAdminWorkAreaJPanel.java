@@ -58,7 +58,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         manageDeliveryMan = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         SystemAdminPanelRight = new javax.swing.JPanel();
 
         setLayout(new java.awt.BorderLayout());
@@ -77,6 +77,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         manageCustomerPanel.setLayout(new java.awt.BorderLayout());
 
+        manageCustomers.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
         manageCustomers.setForeground(new java.awt.Color(0, 153, 0));
         manageCustomers.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         manageCustomers.setText("Manage Customers");
@@ -87,7 +88,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         manageCustomerPanel.add(manageCustomers, java.awt.BorderLayout.CENTER);
 
-        jPanel1.add(manageCustomerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 280, 50));
+        jPanel1.add(manageCustomerPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 240, 280, 50));
 
         manageRestaurants.setBackground(new java.awt.Color(0, 0, 0));
         manageRestaurants.setPreferredSize(new java.awt.Dimension(264, 48));
@@ -102,6 +103,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         manageRestaurants.add(jLabel4, java.awt.BorderLayout.LINE_END);
 
         jLabel5.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel5.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 153, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Manage Restaurants");
@@ -112,7 +114,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         manageRestaurants.add(jLabel5, java.awt.BorderLayout.CENTER);
 
-        jPanel1.add(manageRestaurants, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 280, 60));
+        jPanel1.add(manageRestaurants, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 280, 50));
 
         manageDeliveryMan.setBackground(new java.awt.Color(0, 0, 0));
         manageDeliveryMan.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -125,15 +127,17 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         manageDeliveryMan.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 11, 37, 28));
 
+        jLabel7.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 153, 0));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel7.setText("Manage Delivery Man");
         manageDeliveryMan.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 217, 40));
 
-        jPanel1.add(manageDeliveryMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 280, 50));
+        jPanel1.add(manageDeliveryMan, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 380, 280, 50));
 
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 280, 50));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/3501696.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, 210, 170));
 
         systemAdminPanel.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 840));
 
@@ -201,7 +205,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel SystemAdminPanelRight;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

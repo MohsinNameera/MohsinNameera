@@ -12,6 +12,8 @@ import Business.EcoSystem;
 import Business.UserAccount.UserAccount;
 import Business.UserAccount.UserAccountDirectory;
 import java.awt.CardLayout;
+import java.awt.Color;
+import java.awt.Font;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -36,6 +38,13 @@ public class CustomeR extends javax.swing.JPanel {
         inListn();
         this.userProcessContainer=parentContainerPanel;
         this.ecosystem=ecosystem;
+        tblCustomer.getTableHeader().setFont(new Font("Tw Cen MT Condensed", Font.BOLD,18));
+        tblCustomer.getTableHeader().setOpaque(true);
+        tblCustomer.getTableHeader().setBackground(Color.GREEN);
+        tblCustomer.getTableHeader().setForeground(Color.BLACK);
+        tblCustomer.setRowHeight(25);
+        
+        
         populate();
      
     }
@@ -53,29 +62,140 @@ public class CustomeR extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblCustomer = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        createUserName = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        createPassword = new javax.swing.JTextField();
-        jLabel4 = new javax.swing.JLabel();
-        createName = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        createAddress = new javax.swing.JTextField();
         btnCreateCustomer = new javax.swing.JButton();
         btnModify = new javax.swing.JButton();
         btnDelete = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel4 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
+        createUserName = new javax.swing.JTextField();
+        jPanel18 = new javax.swing.JPanel();
+        jPanel19 = new javax.swing.JPanel();
+        jPanel28 = new javax.swing.JPanel();
+        jPanel29 = new javax.swing.JPanel();
+        jPanel30 = new javax.swing.JPanel();
+        jPanel31 = new javax.swing.JPanel();
+        jPanel32 = new javax.swing.JPanel();
+        jPanel33 = new javax.swing.JPanel();
+        jPanel34 = new javax.swing.JPanel();
+        jPanel35 = new javax.swing.JPanel();
+        jPanel36 = new javax.swing.JPanel();
+        jPanel37 = new javax.swing.JPanel();
+        jPanel38 = new javax.swing.JPanel();
+        jPanel39 = new javax.swing.JPanel();
+        jPanel40 = new javax.swing.JPanel();
+        jPanel41 = new javax.swing.JPanel();
+        jPanel24 = new javax.swing.JPanel();
+        jPanel25 = new javax.swing.JPanel();
+        jPanel56 = new javax.swing.JPanel();
+        jPanel57 = new javax.swing.JPanel();
+        jPanel58 = new javax.swing.JPanel();
+        jPanel59 = new javax.swing.JPanel();
+        jPanel60 = new javax.swing.JPanel();
+        jPanel61 = new javax.swing.JPanel();
+        jPanel62 = new javax.swing.JPanel();
+        jPanel63 = new javax.swing.JPanel();
+        jPanel64 = new javax.swing.JPanel();
+        jPanel65 = new javax.swing.JPanel();
+        jPanel66 = new javax.swing.JPanel();
+        jPanel67 = new javax.swing.JPanel();
+        jPanel68 = new javax.swing.JPanel();
+        jPanel69 = new javax.swing.JPanel();
+        createPassword = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel22 = new javax.swing.JPanel();
+        jPanel23 = new javax.swing.JPanel();
+        jPanel42 = new javax.swing.JPanel();
+        jPanel43 = new javax.swing.JPanel();
+        jPanel44 = new javax.swing.JPanel();
+        jPanel45 = new javax.swing.JPanel();
+        jPanel46 = new javax.swing.JPanel();
+        jPanel47 = new javax.swing.JPanel();
+        jPanel48 = new javax.swing.JPanel();
+        jPanel49 = new javax.swing.JPanel();
+        jPanel50 = new javax.swing.JPanel();
+        jPanel51 = new javax.swing.JPanel();
+        jPanel52 = new javax.swing.JPanel();
+        jPanel53 = new javax.swing.JPanel();
+        jPanel54 = new javax.swing.JPanel();
+        jPanel55 = new javax.swing.JPanel();
+        createAddress = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        jPanel26 = new javax.swing.JPanel();
+        jPanel27 = new javax.swing.JPanel();
+        jPanel70 = new javax.swing.JPanel();
+        jPanel71 = new javax.swing.JPanel();
+        jPanel72 = new javax.swing.JPanel();
+        jPanel73 = new javax.swing.JPanel();
+        jPanel74 = new javax.swing.JPanel();
+        jPanel75 = new javax.swing.JPanel();
+        jPanel76 = new javax.swing.JPanel();
+        jPanel77 = new javax.swing.JPanel();
+        jPanel78 = new javax.swing.JPanel();
+        jPanel79 = new javax.swing.JPanel();
+        jPanel80 = new javax.swing.JPanel();
+        jPanel81 = new javax.swing.JPanel();
+        jPanel82 = new javax.swing.JPanel();
+        jPanel83 = new javax.swing.JPanel();
+        jPanel84 = new javax.swing.JPanel();
+        jPanel85 = new javax.swing.JPanel();
+        jPanel86 = new javax.swing.JPanel();
+        jPanel87 = new javax.swing.JPanel();
+        jPanel88 = new javax.swing.JPanel();
+        jPanel89 = new javax.swing.JPanel();
+        jPanel90 = new javax.swing.JPanel();
+        jPanel91 = new javax.swing.JPanel();
+        jPanel92 = new javax.swing.JPanel();
+        jPanel93 = new javax.swing.JPanel();
+        jPanel94 = new javax.swing.JPanel();
+        jPanel95 = new javax.swing.JPanel();
+        jPanel96 = new javax.swing.JPanel();
+        jPanel97 = new javax.swing.JPanel();
+        jPanel98 = new javax.swing.JPanel();
+        jPanel99 = new javax.swing.JPanel();
         createPhone = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jPanel100 = new javax.swing.JPanel();
+        jPanel101 = new javax.swing.JPanel();
+        jPanel102 = new javax.swing.JPanel();
+        jPanel103 = new javax.swing.JPanel();
+        jPanel104 = new javax.swing.JPanel();
+        jPanel105 = new javax.swing.JPanel();
+        jPanel106 = new javax.swing.JPanel();
+        jPanel107 = new javax.swing.JPanel();
+        jPanel108 = new javax.swing.JPanel();
+        jPanel109 = new javax.swing.JPanel();
+        jPanel110 = new javax.swing.JPanel();
+        jPanel111 = new javax.swing.JPanel();
+        jPanel112 = new javax.swing.JPanel();
+        jPanel113 = new javax.swing.JPanel();
+        jPanel114 = new javax.swing.JPanel();
+        jPanel115 = new javax.swing.JPanel();
+        createName = new javax.swing.JTextField();
+        jLabel4 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(0, 0, 0));
 
-        jPanel1.setBackground(new java.awt.Color(240, 178, 62));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setPreferredSize(new java.awt.Dimension(920, 708));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jScrollPane1.setBackground(new java.awt.Color(0, 0, 0));
+        jScrollPane1.setBorder(null);
+        jScrollPane1.setFocusable(false);
+        jScrollPane1.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+
+        tblCustomer.setAutoCreateRowSorter(true);
+        tblCustomer.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        tblCustomer.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
         tblCustomer.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
                 "Name", "Address", "Phone", "Username", "Password"
@@ -96,75 +216,467 @@ public class CustomeR extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        tblCustomer.setGridColor(new java.awt.Color(255, 255, 255));
+        tblCustomer.setIntercellSpacing(new java.awt.Dimension(0, 0));
+        tblCustomer.setRowHeight(25);
+        tblCustomer.setSelectionBackground(new java.awt.Color(0, 153, 0));
         jScrollPane1.setViewportView(tblCustomer);
+        if (tblCustomer.getColumnModel().getColumnCount() > 0) {
+            tblCustomer.getColumnModel().getColumn(0).setResizable(false);
+            tblCustomer.getColumnModel().getColumn(1).setResizable(false);
+            tblCustomer.getColumnModel().getColumn(2).setResizable(false);
+            tblCustomer.getColumnModel().getColumn(3).setResizable(false);
+            tblCustomer.getColumnModel().getColumn(3).setPreferredWidth(10);
+            tblCustomer.getColumnModel().getColumn(4).setResizable(false);
+        }
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 643, 165));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 90, 630, 160));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 153, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage Customers");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, 643, -1));
+        jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 5, true));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 20, 380, -1));
 
-        jLabel2.setForeground(new java.awt.Color(51, 153, 0));
-        jLabel2.setText("Username");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 271, -1, -1));
-
-        createUserName.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                createUserNameActionPerformed(evt);
-            }
-        });
-        jPanel1.add(createUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 266, 259, -1));
-
-        jLabel3.setForeground(new java.awt.Color(51, 153, 0));
-        jLabel3.setText("Password");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 309, -1, -1));
-        jPanel1.add(createPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 304, 259, -1));
-
-        jLabel4.setForeground(new java.awt.Color(51, 153, 0));
-        jLabel4.setText("Name");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 347, -1, -1));
-        jPanel1.add(createName, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 342, 259, -1));
-
-        jLabel5.setForeground(new java.awt.Color(0, 153, 0));
-        jLabel5.setText("Address");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 385, -1, -1));
-        jPanel1.add(createAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 380, 259, -1));
-
-        btnCreateCustomer.setText("Create");
+        btnCreateCustomer.setBackground(new java.awt.Color(255, 255, 255));
+        btnCreateCustomer.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        btnCreateCustomer.setForeground(new java.awt.Color(0, 153, 0));
+        btnCreateCustomer.setText("CREATE");
         btnCreateCustomer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateCustomerActionPerformed(evt);
             }
         });
-        jPanel1.add(btnCreateCustomer, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 464, -1, -1));
+        jPanel1.add(btnCreateCustomer, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 360, 90, -1));
 
-        btnModify.setText("Modify");
+        btnModify.setBackground(new java.awt.Color(255, 255, 255));
+        btnModify.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        btnModify.setForeground(new java.awt.Color(0, 153, 0));
+        btnModify.setText("UPDATE");
         btnModify.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnModifyActionPerformed(evt);
             }
         });
-        jPanel1.add(btnModify, new org.netbeans.lib.awtextra.AbsoluteConstraints(344, 464, 82, -1));
+        jPanel1.add(btnModify, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 430, 90, -1));
 
-        btnDelete.setText("delete");
+        btnDelete.setBackground(new java.awt.Color(255, 255, 255));
+        btnDelete.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        btnDelete.setForeground(new java.awt.Color(51, 153, 0));
+        btnDelete.setText("DELETE");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteActionPerformed(evt);
             }
         });
-        jPanel1.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(438, 464, 73, -1));
+        jPanel1.add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 500, 90, -1));
 
-        jLabel6.setText("Phone");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(129, 423, -1, -1));
-        jPanel1.add(createPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 418, 259, -1));
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel3.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 300, 310, 30));
+
+        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 153, 0));
+        jLabel2.setText(" Username");
+        jLabel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, 40));
+
+        createUserName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        createUserName.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                createUserNameActionPerformed(evt);
+            }
+        });
+        jPanel3.add(createUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 230, 40));
+
+        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 290, 310, 40));
+
+        jPanel18.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel18.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel19.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel18.add(jPanel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel28.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel29.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel28.add(jPanel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel30.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel31.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel30.add(jPanel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel32.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel33.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel32.add(jPanel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel30.add(jPanel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel34.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel35.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel34.add(jPanel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel36.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel37.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel36.add(jPanel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel38.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel39.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel38.add(jPanel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel40.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel41.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel40.add(jPanel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel38.add(jPanel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel36.add(jPanel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel34.add(jPanel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel30.add(jPanel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel28.add(jPanel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel18.add(jPanel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel24.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel25.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel24.add(jPanel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel56.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel57.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel56.add(jPanel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel58.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel59.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel58.add(jPanel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel60.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel61.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel60.add(jPanel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel58.add(jPanel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel62.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel63.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel62.add(jPanel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel64.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel65.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel64.add(jPanel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel66.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel67.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel66.add(jPanel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel68.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel69.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel68.add(jPanel69, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel66.add(jPanel68, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel64.add(jPanel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel62.add(jPanel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel58.add(jPanel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel56.add(jPanel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel24.add(jPanel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel18.add(jPanel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 570, 200, 40));
+
+        createPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel18.add(createPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 230, 40));
+
+        jLabel3.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 153, 0));
+        jLabel3.setText(" Password");
+        jLabel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel18.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, 40));
+
+        jPanel1.add(jPanel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 310, 40));
+
+        jPanel22.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel22.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel23.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel22.add(jPanel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel42.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel43.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel42.add(jPanel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel44.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel45.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel44.add(jPanel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel46.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel47.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel46.add(jPanel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel44.add(jPanel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel48.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel49.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel48.add(jPanel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel50.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel51.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel50.add(jPanel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel52.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel53.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel52.add(jPanel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel54.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel55.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel54.add(jPanel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel52.add(jPanel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel50.add(jPanel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel48.add(jPanel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel44.add(jPanel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel42.add(jPanel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel22.add(jPanel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        createAddress.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel22.add(createAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 230, 40));
+
+        jLabel5.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(0, 153, 0));
+        jLabel5.setText("  Address");
+        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel22.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, 40));
+
+        jPanel1.add(jPanel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 570, 310, 40));
+
+        jPanel26.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel26.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel27.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel26.add(jPanel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel70.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel71.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel70.add(jPanel71, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel72.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel73.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel72.add(jPanel73, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel74.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel75.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel74.add(jPanel75, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel72.add(jPanel74, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel76.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel77.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel76.add(jPanel77, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel78.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel79.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel78.add(jPanel79, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel80.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel81.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel80.add(jPanel81, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel82.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel83.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel82.add(jPanel83, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel80.add(jPanel82, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel78.add(jPanel80, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel76.add(jPanel78, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel72.add(jPanel76, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel70.add(jPanel72, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel26.add(jPanel70, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel84.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel85.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel84.add(jPanel85, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel86.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel87.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel86.add(jPanel87, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel88.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel89.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel88.add(jPanel89, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel90.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel91.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel90.add(jPanel91, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel88.add(jPanel90, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel92.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel93.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel92.add(jPanel93, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel94.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel95.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel94.add(jPanel95, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel96.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel97.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel96.add(jPanel97, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel98.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel99.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel98.add(jPanel99, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel96.add(jPanel98, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel94.add(jPanel96, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel92.add(jPanel94, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel88.add(jPanel92, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel86.add(jPanel88, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel84.add(jPanel86, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel26.add(jPanel84, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 570, 200, 40));
+
+        createPhone.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel26.add(createPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 230, 40));
+
+        jLabel6.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(51, 153, 0));
+        jLabel6.setText("   Phone");
+        jLabel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel26.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, 40));
+
+        jPanel1.add(jPanel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 500, 310, 40));
+
+        jPanel100.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel100.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel101.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel100.add(jPanel101, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel102.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel103.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel102.add(jPanel103, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel104.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel105.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel104.add(jPanel105, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel106.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel107.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel106.add(jPanel107, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel104.add(jPanel106, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel108.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel109.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel108.add(jPanel109, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel110.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel111.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel110.add(jPanel111, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel112.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel113.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel112.add(jPanel113, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel114.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel115.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel114.add(jPanel115, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 340, 310, 40));
+
+        jPanel112.add(jPanel114, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel110.add(jPanel112, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel108.add(jPanel110, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel104.add(jPanel108, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel102.add(jPanel104, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        jPanel100.add(jPanel102, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 560, 200, 40));
+
+        createName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel100.add(createName, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 230, 40));
+
+        jLabel4.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 153, 0));
+        jLabel4.setText("   Name");
+        jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel100.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, 40));
+
+        jPanel1.add(jPanel100, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 430, 310, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 915, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 919, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -176,29 +688,25 @@ public class CustomeR extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_createUserNameActionPerformed
 
-    private void btnCreateCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateCustomerActionPerformed
-        // TODO add your handling code here:
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        int selectedRow = tblCustomer.getSelectedRow();
 
-        if( createUserName.getText().isEmpty()||createPassword.getText().isEmpty()|| createName.getText().isEmpty() || createAddress.getText().isEmpty() || createPhone.getText().isEmpty())
-        {
-            JOptionPane.showMessageDialog(null, "please enter all mandatory fields");
-            return;
-        }
-
-        if(ecosystem.getUserAccountDirectory().checkIfUsernameIsUnique(createUserName.getText())){
-            Customer customer = new Customer(createUserName.getText(), createPassword.getText(), createName.getText(), createAddress.getText(), createPhone.getText());
-            ecosystem.getUserAccountDirectory().addUserAccount(customer);
-            ecosystem.getCustomerDirectory().addCustomer(customer);
+        if (selectedRow >= 0) {
+            Customer customer = (Customer) tblCustomer.getValueAt(selectedRow, 0);
+            CustomerDirectory customerDirectory = ecosystem.getCustomerDirectory();
+            customerDirectory.removeCustomer(customer);
+            JOptionPane.showMessageDialog(null, "Customer   "  + createUserName.getText() + " deleted");
             populate();
+            createName.setText("");
+            createPhone.setText("");
             createUserName.setText("");
             createPassword.setText("");
-            createName.setText("");
             createAddress.setText("");
-            createPhone.setText("");
-        }else{
-            JOptionPane.showMessageDialog(null, "Username " + createUserName.getText() + " already exists, Please enter a new one");
+
+        } else {
+            JOptionPane.showMessageDialog(null, "Please select a row.");
         }
-    }//GEN-LAST:event_btnCreateCustomerActionPerformed
+    }//GEN-LAST:event_btnDeleteActionPerformed
 
     private void btnModifyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModifyActionPerformed
         System.out.println("Update");
@@ -226,25 +734,29 @@ public class CustomeR extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_btnModifyActionPerformed
 
-    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
-        int selectedRow = tblCustomer.getSelectedRow();
+    private void btnCreateCustomerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateCustomerActionPerformed
+        // TODO add your handling code here:
 
-        if (selectedRow >= 0) {
-            Customer customer = (Customer) tblCustomer.getValueAt(selectedRow, 0);
-            CustomerDirectory customerDirectory = ecosystem.getCustomerDirectory();
-            customerDirectory.removeCustomer(customer);
-            JOptionPane.showMessageDialog(null, "Customer   "  + createUserName.getText() + " deleted");
+        if( createUserName.getText().isEmpty()||createPassword.getText().isEmpty()|| createName.getText().isEmpty() || createAddress.getText().isEmpty() || createPhone.getText().isEmpty())
+        {
+            JOptionPane.showMessageDialog(null, "please enter all mandatory fields");
+            return;
+        }
+
+        if(ecosystem.getUserAccountDirectory().checkIfUsernameIsUnique(createUserName.getText())){
+            Customer customer = new Customer(createUserName.getText(), createPassword.getText(), createName.getText(), createAddress.getText(), createPhone.getText());
+            ecosystem.getUserAccountDirectory().addUserAccount(customer);
+            ecosystem.getCustomerDirectory().addCustomer(customer);
             populate();
-            createName.setText("");
-            createPhone.setText("");
             createUserName.setText("");
             createPassword.setText("");
+            createName.setText("");
             createAddress.setText("");
-
-        } else {
-            JOptionPane.showMessageDialog(null, "Please select a row.");
+            createPhone.setText("");
+        }else{
+            JOptionPane.showMessageDialog(null, "Username " + createUserName.getText() + " already exists, Please enter a new one");
         }
-    }//GEN-LAST:event_btnDeleteActionPerformed
+    }//GEN-LAST:event_btnCreateCustomerActionPerformed
      private void populate() {
         CustomerDirectory customerDirectory = ecosystem.getCustomerDirectory();
         DefaultTableModel model = (DefaultTableModel) tblCustomer.getModel();
@@ -306,6 +818,104 @@ public class CustomeR extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel100;
+    private javax.swing.JPanel jPanel101;
+    private javax.swing.JPanel jPanel102;
+    private javax.swing.JPanel jPanel103;
+    private javax.swing.JPanel jPanel104;
+    private javax.swing.JPanel jPanel105;
+    private javax.swing.JPanel jPanel106;
+    private javax.swing.JPanel jPanel107;
+    private javax.swing.JPanel jPanel108;
+    private javax.swing.JPanel jPanel109;
+    private javax.swing.JPanel jPanel110;
+    private javax.swing.JPanel jPanel111;
+    private javax.swing.JPanel jPanel112;
+    private javax.swing.JPanel jPanel113;
+    private javax.swing.JPanel jPanel114;
+    private javax.swing.JPanel jPanel115;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
+    private javax.swing.JPanel jPanel22;
+    private javax.swing.JPanel jPanel23;
+    private javax.swing.JPanel jPanel24;
+    private javax.swing.JPanel jPanel25;
+    private javax.swing.JPanel jPanel26;
+    private javax.swing.JPanel jPanel27;
+    private javax.swing.JPanel jPanel28;
+    private javax.swing.JPanel jPanel29;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel30;
+    private javax.swing.JPanel jPanel31;
+    private javax.swing.JPanel jPanel32;
+    private javax.swing.JPanel jPanel33;
+    private javax.swing.JPanel jPanel34;
+    private javax.swing.JPanel jPanel35;
+    private javax.swing.JPanel jPanel36;
+    private javax.swing.JPanel jPanel37;
+    private javax.swing.JPanel jPanel38;
+    private javax.swing.JPanel jPanel39;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel40;
+    private javax.swing.JPanel jPanel41;
+    private javax.swing.JPanel jPanel42;
+    private javax.swing.JPanel jPanel43;
+    private javax.swing.JPanel jPanel44;
+    private javax.swing.JPanel jPanel45;
+    private javax.swing.JPanel jPanel46;
+    private javax.swing.JPanel jPanel47;
+    private javax.swing.JPanel jPanel48;
+    private javax.swing.JPanel jPanel49;
+    private javax.swing.JPanel jPanel50;
+    private javax.swing.JPanel jPanel51;
+    private javax.swing.JPanel jPanel52;
+    private javax.swing.JPanel jPanel53;
+    private javax.swing.JPanel jPanel54;
+    private javax.swing.JPanel jPanel55;
+    private javax.swing.JPanel jPanel56;
+    private javax.swing.JPanel jPanel57;
+    private javax.swing.JPanel jPanel58;
+    private javax.swing.JPanel jPanel59;
+    private javax.swing.JPanel jPanel60;
+    private javax.swing.JPanel jPanel61;
+    private javax.swing.JPanel jPanel62;
+    private javax.swing.JPanel jPanel63;
+    private javax.swing.JPanel jPanel64;
+    private javax.swing.JPanel jPanel65;
+    private javax.swing.JPanel jPanel66;
+    private javax.swing.JPanel jPanel67;
+    private javax.swing.JPanel jPanel68;
+    private javax.swing.JPanel jPanel69;
+    private javax.swing.JPanel jPanel70;
+    private javax.swing.JPanel jPanel71;
+    private javax.swing.JPanel jPanel72;
+    private javax.swing.JPanel jPanel73;
+    private javax.swing.JPanel jPanel74;
+    private javax.swing.JPanel jPanel75;
+    private javax.swing.JPanel jPanel76;
+    private javax.swing.JPanel jPanel77;
+    private javax.swing.JPanel jPanel78;
+    private javax.swing.JPanel jPanel79;
+    private javax.swing.JPanel jPanel80;
+    private javax.swing.JPanel jPanel81;
+    private javax.swing.JPanel jPanel82;
+    private javax.swing.JPanel jPanel83;
+    private javax.swing.JPanel jPanel84;
+    private javax.swing.JPanel jPanel85;
+    private javax.swing.JPanel jPanel86;
+    private javax.swing.JPanel jPanel87;
+    private javax.swing.JPanel jPanel88;
+    private javax.swing.JPanel jPanel89;
+    private javax.swing.JPanel jPanel90;
+    private javax.swing.JPanel jPanel91;
+    private javax.swing.JPanel jPanel92;
+    private javax.swing.JPanel jPanel93;
+    private javax.swing.JPanel jPanel94;
+    private javax.swing.JPanel jPanel95;
+    private javax.swing.JPanel jPanel96;
+    private javax.swing.JPanel jPanel97;
+    private javax.swing.JPanel jPanel98;
+    private javax.swing.JPanel jPanel99;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblCustomer;
     // End of variables declaration//GEN-END:variables
