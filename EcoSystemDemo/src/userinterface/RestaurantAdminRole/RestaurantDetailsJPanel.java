@@ -58,6 +58,7 @@ public class RestaurantDetailsJPanel extends javax.swing.JPanel {
         confirmButton = new javax.swing.JButton();
         resetButton = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(0, 0, 0));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));

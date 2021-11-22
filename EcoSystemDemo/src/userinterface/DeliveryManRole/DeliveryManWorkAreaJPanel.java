@@ -91,17 +91,15 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
         tblDeliveryManWorkRequest = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 0, 0));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(240, 178, 62));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblDeliveryManWorkRequest.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null},
-                {null, null, null, null, null}
+
             },
             new String [] {
                 "Message", "Sender", "Receiver", "Status", "Request Date"
@@ -111,7 +109,7 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
                 java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, true
+                false, false, false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
@@ -122,16 +120,19 @@ public class DeliveryManWorkAreaJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
+        tblDeliveryManWorkRequest.setGridColor(new java.awt.Color(255, 255, 255));
         jScrollPane2.setViewportView(tblDeliveryManWorkRequest);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 70, 760, 410));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 630, 380));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 153, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("ORDER TO DELIVER");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 20, 790, -1));
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, 320, -1));
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1030, 620));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, 660));
     }// </editor-fold>//GEN-END:initComponents
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -61,6 +61,7 @@ public class menuJPanel extends javax.swing.JPanel {
         btnAddItem = new javax.swing.JButton();
         btnUpdateItem = new javax.swing.JButton();
 
+        setBackground(new java.awt.Color(0, 0, 0));
         setMinimumSize(new java.awt.Dimension(500, 580));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 

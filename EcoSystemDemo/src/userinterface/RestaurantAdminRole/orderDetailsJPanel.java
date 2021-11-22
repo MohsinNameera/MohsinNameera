@@ -137,31 +137,41 @@ public class orderDetailsJPanel extends javax.swing.JPanel {
         customerFeedbackLabel = new javax.swing.JLabel();
         declineOrder = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(1200, 1000));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setPreferredSize(new java.awt.Dimension(1200, 900));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel4.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 153, 0));
         jLabel4.setText("Restaurant Name");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 130, -1));
 
-        deliveryManLabel.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        deliveryManLabel.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        deliveryManLabel.setForeground(new java.awt.Color(51, 153, 0));
         deliveryManLabel.setText("Delivery Man Name");
         jPanel1.add(deliveryManLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 130, -1));
 
-        jLabel6.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(0, 153, 0));
         jLabel6.setText("Request Date");
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 117, -1));
 
         restaurantName.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        restaurantName.setForeground(new java.awt.Color(0, 153, 0));
         restaurantName.setText("mo");
         jPanel1.add(restaurantName, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 213, -1));
 
         deliveryManNameValue.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        deliveryManNameValue.setForeground(new java.awt.Color(51, 153, 0));
         deliveryManNameValue.setText("nam");
         jPanel1.add(deliveryManNameValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 186, -1));
 
         requestDate.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        requestDate.setForeground(new java.awt.Color(0, 153, 0));
         requestDate.setText("<value>");
         jPanel1.add(requestDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 213, -1));
 
@@ -192,19 +202,23 @@ public class orderDetailsJPanel extends javax.swing.JPanel {
 
         jPanel1.add(cartScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 660, 190));
 
-        jLabel9.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(0, 153, 0));
         jLabel9.setText("Total");
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, 50, -1));
 
-        jLabel10.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel10.setForeground(new java.awt.Color(0, 153, 0));
         jLabel10.setText("Message");
         jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 470, -1, -1));
 
-        totalPrice.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        totalPrice.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        totalPrice.setForeground(new java.awt.Color(0, 153, 0));
         totalPrice.setText("<value>");
         jPanel1.add(totalPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 470, 127, -1));
 
-        message.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        message.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        message.setForeground(new java.awt.Color(0, 153, 0));
         message.setText("<value>");
         jPanel1.add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 470, 190, -1));
 
@@ -214,11 +228,13 @@ public class orderDetailsJPanel extends javax.swing.JPanel {
         jLabel12.setText("ORDER DETAILS");
         jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 660, -1));
 
-        jLabel14.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(0, 153, 0));
         jLabel14.setText("Status");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 103, -1));
 
         status.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        status.setForeground(new java.awt.Color(0, 153, 0));
         status.setText("<value>");
         jPanel1.add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 213, -1));
 
@@ -244,6 +260,7 @@ public class orderDetailsJPanel extends javax.swing.JPanel {
         jPanel1.add(acceptOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 500, -1, -1));
 
         assignDeliveryPerson.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        assignDeliveryPerson.setForeground(new java.awt.Color(51, 153, 0));
         assignDeliveryPerson.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 assignDeliveryPersonActionPerformed(evt);
@@ -251,7 +268,8 @@ public class orderDetailsJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(assignDeliveryPerson, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, 137, -1));
 
-        assignDeliveryPersonLabel.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        assignDeliveryPersonLabel.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        assignDeliveryPersonLabel.setForeground(new java.awt.Color(51, 153, 0));
         assignDeliveryPersonLabel.setText("Assign Delivery Person");
         jPanel1.add(assignDeliveryPersonLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, -1, -1));
 
@@ -293,22 +311,7 @@ public class orderDetailsJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(declineOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 500, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 890, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 890, Short.MAX_VALUE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 692, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 679, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 13, Short.MAX_VALUE)))
-        );
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 679));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack1ActionPerformed

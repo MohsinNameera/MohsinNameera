@@ -53,6 +53,8 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         orderStatusLabel = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 0, 0));
+
         rightSystemAdminPanel.setBackground(new java.awt.Color(0, 0, 0));
         rightSystemAdminPanel.setPreferredSize(new java.awt.Dimension(940, 808));
         rightSystemAdminPanel.setLayout(new java.awt.CardLayout());
@@ -87,8 +89,8 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(placeOrderLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 14, Short.MAX_VALUE))
+                .addComponent(placeOrderLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 16, Short.MAX_VALUE))
         );
         placeOrderButtonPanelLayout.setVerticalGroup(
             placeOrderButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -100,7 +102,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jPanel1.add(placeOrderButtonPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 280, -1));
+        jPanel1.add(placeOrderButtonPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 250, -1));
 
         orderStatusButtonPanel.setBackground(new java.awt.Color(0, 0, 0));
         orderStatusButtonPanel.setPreferredSize(new java.awt.Dimension(264, 48));
@@ -130,8 +132,8 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                 .addContainerGap()
                 .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(orderStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(orderStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(29, Short.MAX_VALUE))
         );
         orderStatusButtonPanelLayout.setVerticalGroup(
             orderStatusButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -143,10 +145,11 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
                 .addContainerGap())
         );
 
-        jPanel1.add(orderStatusButtonPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 280, 50));
+        jPanel1.add(orderStatusButtonPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, 240, 50));
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Uber-Eats-Transparent - Copy.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 200, 170));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -154,13 +157,13 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(rightSystemAdminPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(rightSystemAdminPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 1040, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(rightSystemAdminPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
+            .addComponent(rightSystemAdminPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 755, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 

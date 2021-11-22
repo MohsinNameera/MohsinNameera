@@ -61,6 +61,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         jLabel2 = new javax.swing.JLabel();
         SystemAdminPanelRight = new javax.swing.JPanel();
 
+        setBackground(new java.awt.Color(0, 0, 0));
         setLayout(new java.awt.BorderLayout());
 
         systemAdminPanel.setBackground(new java.awt.Color(0, 0, 0));

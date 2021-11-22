@@ -66,6 +66,7 @@ public class orderJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         tblRestaurantWorkRequest = new javax.swing.JTable();
 
+        setBackground(new java.awt.Color(0, 0, 0));
         setPreferredSize(new java.awt.Dimension(1200, 900));
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
@@ -84,7 +85,7 @@ public class orderJPanel extends javax.swing.JPanel {
 
             },
             new String [] {
-                "Message", "Customer Name", "Status", "Request Date"
+                "Message", "Customer Name", "Status", "Date"
             }
         ) {
             Class[] types = new Class [] {
@@ -102,13 +103,20 @@ public class orderJPanel extends javax.swing.JPanel {
                 return canEdit [columnIndex];
             }
         });
-        tblRestaurantWorkRequest.setCellSelectionEnabled(false);
+        tblRestaurantWorkRequest.setAutoResizeMode(javax.swing.JTable.AUTO_RESIZE_ALL_COLUMNS);
         tblRestaurantWorkRequest.setGridColor(new java.awt.Color(255, 255, 255));
-        tblRestaurantWorkRequest.setPreferredSize(new java.awt.Dimension(500, 50));
+        tblRestaurantWorkRequest.setPreferredSize(new java.awt.Dimension(500, 500));
         jScrollPane1.setViewportView(tblRestaurantWorkRequest);
         tblRestaurantWorkRequest.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+        if (tblRestaurantWorkRequest.getColumnModel().getColumnCount() > 0) {
+            tblRestaurantWorkRequest.getColumnModel().getColumn(0).setResizable(false);
+            tblRestaurantWorkRequest.getColumnModel().getColumn(0).setPreferredWidth(10);
+            tblRestaurantWorkRequest.getColumnModel().getColumn(1).setPreferredWidth(10);
+            tblRestaurantWorkRequest.getColumnModel().getColumn(2).setPreferredWidth(10);
+            tblRestaurantWorkRequest.getColumnModel().getColumn(3).setPreferredWidth(10);
+        }
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 740, 372));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 110, 690, 372));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

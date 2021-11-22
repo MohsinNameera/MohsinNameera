@@ -93,36 +93,51 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         restaurantAddressValue = new javax.swing.JTextArea();
 
+        setBackground(new java.awt.Color(0, 0, 0));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(240, 178, 62));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 153, 0));
         jLabel1.setText("Restaurant Name");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 54, 112, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, 112, -1));
 
+        backJButton.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        backJButton.setForeground(new java.awt.Color(51, 153, 0));
         backJButton.setText("Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backJButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 15, -1, -1));
+        jPanel1.add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 10, -1, -1));
 
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 153, 0));
         jLabel2.setText("Restaurant Address");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 88, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 153, 0));
         jLabel3.setText("Customer Name");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 191, 112, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 220, 112, -1));
 
+        jLabel4.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 153, 0));
         jLabel4.setText("Customer Address");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 225, 112, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 270, 150, -1));
 
+        restaurantNameValue.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        restaurantNameValue.setForeground(new java.awt.Color(51, 153, 0));
         restaurantNameValue.setText("<Value>");
-        jPanel1.add(restaurantNameValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 54, 244, -1));
+        jPanel1.add(restaurantNameValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 140, -1));
 
+        customerNameValue.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        customerNameValue.setForeground(new java.awt.Color(51, 153, 0));
         customerNameValue.setText("<Value>");
-        jPanel1.add(customerNameValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 191, 166, -1));
+        jPanel1.add(customerNameValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, 166, -1));
 
         jLabel9.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(51, 153, 0));
@@ -131,31 +146,38 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
         jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
         jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, 230, -1));
 
+        btnStatus.setBackground(new java.awt.Color(255, 255, 255));
+        btnStatus.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        btnStatus.setForeground(new java.awt.Color(0, 153, 0));
         btnStatus.setText("Pick Order");
         btnStatus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnStatusActionPerformed(evt);
             }
         });
-        jPanel1.add(btnStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 373, -1, -1));
+        jPanel1.add(btnStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 450, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(51, 153, 0));
         jLabel5.setText("Status");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 339, 112, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 400, 112, -1));
 
+        status.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        status.setForeground(new java.awt.Color(51, 153, 0));
         status.setText("<Value>");
-        jPanel1.add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 339, 166, -1));
+        jPanel1.add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 400, 166, -1));
 
         customerAddressValue.setColumns(20);
         customerAddressValue.setRows(5);
         jScrollPane1.setViewportView(customerAddressValue);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 225, -1, -1));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 260, -1, -1));
 
         restaurantAddressValue.setColumns(20);
         restaurantAddressValue.setRows(5);
         jScrollPane2.setViewportView(restaurantAddressValue);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 88, -1, -1));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 110, -1, -1));
 
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, 1, 980, 630));
     }// </editor-fold>//GEN-END:initComponents

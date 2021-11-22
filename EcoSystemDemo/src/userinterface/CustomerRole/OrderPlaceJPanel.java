@@ -200,36 +200,40 @@ public class OrderPlaceJPanel extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         totalPrice = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 0, 0));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(240, 178, 62));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        requestTestJButton.setBackground(new java.awt.Color(255, 255, 255));
+        requestTestJButton.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        requestTestJButton.setForeground(new java.awt.Color(51, 153, 0));
         requestTestJButton.setText("Request Order");
         requestTestJButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 requestTestJButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(requestTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 560, -1, -1));
+        jPanel1.add(requestTestJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 470, -1, -1));
 
-        jLabel1.setText("Message");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 560, -1, -1));
-        jPanel1.add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 550, 89, -1));
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 153, 0));
+        jLabel1.setText("Custom Message");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 380, -1, -1));
+        jPanel1.add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 370, 190, 60));
 
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 153, 0));
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel2.setText("Menu");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 790, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 100, -1));
 
         tblOrder.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
                 "Item Name", "Item Price"
@@ -252,18 +256,20 @@ public class OrderPlaceJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblOrder);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 140, 660, 130));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 370, 130));
 
+        restaurantComboBox.setForeground(new java.awt.Color(51, 153, 0));
         restaurantComboBox.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 restaurantComboBoxActionPerformed(evt);
             }
         });
-        jPanel1.add(restaurantComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 50, 190, -1));
+        jPanel1.add(restaurantComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 60, 190, -1));
 
-        enterpriseLabel1.setFont(new java.awt.Font("Tahoma", 2, 14)); // NOI18N
+        enterpriseLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed", 3, 18)); // NOI18N
+        enterpriseLabel1.setForeground(new java.awt.Color(51, 153, 0));
         enterpriseLabel1.setText("Select Restaurant");
-        jPanel1.add(enterpriseLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 50, 110, 20));
+        jPanel1.add(enterpriseLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 60, 130, 30));
 
         tblCart.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -290,28 +296,37 @@ public class OrderPlaceJPanel extends javax.swing.JPanel {
         });
         cartScrollPane.setViewportView(tblCart);
 
-        jPanel1.add(cartScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 340, 660, 190));
+        jPanel1.add(cartScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 140, 440, 130));
 
+        jLabel3.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 153, 0));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("CART");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 650, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 110, 100, -1));
 
+        jLabel4.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 153, 0));
         jLabel4.setText("Total");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 550, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 310, 60, 30));
 
         totalPrice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 totalPriceActionPerformed(evt);
             }
         });
-        jPanel1.add(totalPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 540, 150, 30));
+        jPanel1.add(totalPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 310, 100, 30));
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(51, 153, 0));
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("PLACE ORDER");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 20, 740, -1));
+        jLabel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 10, 250, -1));
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-9, 0, 890, 627));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/orderpage.gif"))); // NOI18N
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 530, 480));
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1190, 1000));
     }// </editor-fold>//GEN-END:initComponents
 
     private void requestTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestTestJButtonActionPerformed
@@ -346,6 +361,7 @@ public class OrderPlaceJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField message;

@@ -86,16 +86,23 @@ public class OrderIStatusJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         tblCustomerOrderStatus = new javax.swing.JTable();
+        jLabel2 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(0, 0, 0));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(240, 178, 62));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 153, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("ORDER STATUS");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, 791, -1));
+        jLabel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 30, 270, -1));
+
+        jScrollPane1.setBackground(new java.awt.Color(0, 0, 0));
+        jScrollPane1.setPreferredSize(new java.awt.Dimension(1000, 800));
 
         tblCustomerOrderStatus.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -122,14 +129,19 @@ public class OrderIStatusJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblCustomerOrderStatus);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 80, 790, 350));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 80, 680, 290));
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-3, 0, 900, 570));
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/giphy.gif"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, -1, -1));
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1070, 820));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblCustomerOrderStatus;

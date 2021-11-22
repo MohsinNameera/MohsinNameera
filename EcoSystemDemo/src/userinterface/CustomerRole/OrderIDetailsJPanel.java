@@ -97,24 +97,40 @@ public class OrderIDetailsJPanel extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         customerFeedbackField = new javax.swing.JTextArea();
 
-        jPanel1.setBackground(new java.awt.Color(240, 178, 62));
+        setBackground(new java.awt.Color(0, 0, 0));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setForeground(new java.awt.Color(51, 51, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel1.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 153, 0));
         jLabel1.setText("Restaurant Name");
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 86, -1, -1));
 
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 153, 0));
         jLabel2.setText("Delivery Man Name");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 120, 130, -1));
 
+        jLabel3.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 153, 0));
         jLabel3.setText("Request Date");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 154, 117, -1));
 
+        restaurantName.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        restaurantName.setForeground(new java.awt.Color(51, 153, 0));
         restaurantName.setText("<value>");
         jPanel1.add(restaurantName, new org.netbeans.lib.awtextra.AbsoluteConstraints(257, 86, 207, -1));
 
+        deliveryManName.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        deliveryManName.setForeground(new java.awt.Color(51, 153, 0));
         deliveryManName.setText("<value>");
         jPanel1.add(deliveryManName, new org.netbeans.lib.awtextra.AbsoluteConstraints(257, 120, 207, -1));
 
+        requestDate.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        requestDate.setForeground(new java.awt.Color(51, 153, 0));
         requestDate.setText("<value>");
         jPanel1.add(requestDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(257, 154, 207, -1));
 
@@ -145,23 +161,36 @@ public class OrderIDetailsJPanel extends javax.swing.JPanel {
 
         jPanel1.add(cartScrollPane, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 234, 660, 190));
 
+        jLabel7.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(51, 153, 0));
         jLabel7.setText("Total");
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(83, 450, 50, -1));
 
+        jLabel8.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(0, 153, 0));
         jLabel8.setText("Message");
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(401, 450, -1, -1));
 
+        totalPrice.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        totalPrice.setForeground(new java.awt.Color(51, 153, 0));
         totalPrice.setText("<value>");
         jPanel1.add(totalPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(235, 450, 131, -1));
 
+        message.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        message.setForeground(new java.awt.Color(51, 153, 0));
         message.setText("<value>");
         jPanel1.add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(469, 450, 265, -1));
 
         jLabel11.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(51, 153, 0));
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setText("ORDER DETAILS");
-        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 10, 660, -1));
+        jLabel11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 20, 280, -1));
 
+        submitFeedbackButton.setBackground(new java.awt.Color(255, 255, 255));
+        submitFeedbackButton.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        submitFeedbackButton.setForeground(new java.awt.Color(51, 153, 0));
         submitFeedbackButton.setText("Submit Feedback");
         submitFeedbackButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -170,12 +199,19 @@ public class OrderIDetailsJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(submitFeedbackButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(317, 614, -1, -1));
 
+        jLabel13.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(51, 153, 0));
         jLabel13.setText("Status");
         jPanel1.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 188, 103, -1));
 
+        status.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        status.setForeground(new java.awt.Color(51, 153, 0));
         status.setText("<value>");
         jPanel1.add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(257, 188, 207, -1));
 
+        btnBack.setBackground(new java.awt.Color(255, 255, 255));
+        btnBack.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        btnBack.setForeground(new java.awt.Color(51, 153, 0));
         btnBack.setText("<Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -184,56 +220,23 @@ public class OrderIDetailsJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 9, -1, -1));
 
-        customerFeedBackPanel.setBackground(new java.awt.Color(240, 178, 62));
+        customerFeedBackPanel.setBackground(new java.awt.Color(0, 0, 0));
+        customerFeedBackPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        customerFeedbackLabel.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        customerFeedbackLabel.setForeground(new java.awt.Color(51, 153, 0));
         customerFeedbackLabel.setText("Customer FeedBack");
+        customerFeedBackPanel.add(customerFeedbackLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 50, -1, -1));
 
         customerFeedbackField.setColumns(20);
         customerFeedbackField.setRows(5);
         jScrollPane1.setViewportView(customerFeedbackField);
 
-        javax.swing.GroupLayout customerFeedBackPanelLayout = new javax.swing.GroupLayout(customerFeedBackPanel);
-        customerFeedBackPanel.setLayout(customerFeedBackPanelLayout);
-        customerFeedBackPanelLayout.setHorizontalGroup(
-            customerFeedBackPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(customerFeedBackPanelLayout.createSequentialGroup()
-                .addComponent(customerFeedbackLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 508, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
-        );
-        customerFeedBackPanelLayout.setVerticalGroup(
-            customerFeedBackPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(customerFeedBackPanelLayout.createSequentialGroup()
-                .addGap(24, 24, 24)
-                .addComponent(customerFeedbackLabel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, customerFeedBackPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
+        customerFeedBackPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 10, 570, 100));
 
-        jPanel1.add(customerFeedBackPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 479, -1, -1));
+        jPanel1.add(customerFeedBackPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 479, 750, 130));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 951, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 951, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 655, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 655, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1010, 750));
     }// </editor-fold>//GEN-END:initComponents
 
     private void submitFeedbackButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitFeedbackButtonActionPerformed

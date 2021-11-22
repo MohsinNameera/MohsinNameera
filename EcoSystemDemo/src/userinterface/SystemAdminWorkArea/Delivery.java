@@ -72,6 +72,8 @@ public class Delivery extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         createPhone = new javax.swing.JTextField();
 
+        setBackground(new java.awt.Color(0, 0, 0));
+
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setPreferredSize(new java.awt.Dimension(1200, 900));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
