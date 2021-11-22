@@ -4,6 +4,17 @@
  * and open the template in the editor.
  */
 package userinterface.RestaurantAdminRole;
+import Business.DeliveryMan.DeliveryMan;
+import Business.DeliveryMan.DeliveryManDirectory;
+import Business.EcoSystem;
+import Business.UserAccount.UserAccount;
+import Business.WorkQueue.productWithQty;
+import Business.WorkQueue.orderWorkRequest;
+import java.awt.CardLayout;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -11,12 +22,84 @@ package userinterface.RestaurantAdminRole;
  */
 public class orderDetailsJPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form orderDetailsJPanel
-     */
-    public orderDetailsJPanel() {
+    JPanel userProcessContainer;
+    UserAccount account;
+    EcoSystem ecosystem;
+    orderWorkRequest workRequest;
+    double total = 0.0;
+    private DefaultTableModel orderTable;
+    private DeliveryManDirectory deliveryManDirectory;
+    private int index = -1;
+
+    
+    public orderDetailsJPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount account, orderWorkRequest workRequest) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.ecosystem = ecosystem;
+        this.account = account;
+        this.workRequest = workRequest;
+        orderTable = (DefaultTableModel) tblOrderDetails.getModel();
+        deliveryManDirectory = ecosystem.getDeliveryManDirectory();
+        populateDeliveryManList(deliveryManDirectory.getDeliveryManList());
+        changeButtonText();
+        setVisibleEditable();
+        Show();
     }
+        private void Show() {
+        
+        populateDeliveryMan();
+        
+        restaurantName.setText(workRequest.getRestaurant().getName());
+        requestDate.setText(workRequest.getRequestDate().toString());
+        status.setText(workRequest.getStatus());
+        message.setText(workRequest.getMessage());
+
+        orderTable.setRowCount(0);
+        for (productWithQty productWithQuantity : workRequest.getProductssWithQtyList()) {
+            Object[] row = new Object[orderTable.getColumnCount()];
+            row[0] = productWithQuantity;
+            row[1] = productWithQuantity.getQty();
+            row[2] = productWithQuantity.getProduct().getpPrice() * productWithQuantity.getQty();
+            total += productWithQuantity.getProduct().getpPrice() * productWithQuantity.getQty();
+            orderTable.addRow(row);
+        }
+        totalPrice.setText(total + "");
+
+    }
+
+    private void populateDeliveryMan() {
+        if(workRequest.getDeliverMan() == null &&  
+                !("ordered".equalsIgnoreCase(workRequest.getStatus()) || "declined".equalsIgnoreCase(workRequest.getStatus()))){
+            assignDeliveryPersonLabel.setVisible(true);
+            assignDeliveryPerson.setVisible(true);
+            addDeliveryPerson.setVisible(true);
+            deliveryManNameValue.setVisible(false);
+            deliveryManLabel.setVisible(false);
+        }else{
+            assignDeliveryPersonLabel.setVisible(false);
+            assignDeliveryPerson.setVisible(false);
+            addDeliveryPerson.setVisible(false);
+            deliveryManNameValue.setVisible(true);
+            deliveryManLabel.setVisible(true);
+            if(workRequest.getDeliverMan() != null){
+                deliveryManNameValue.setText(workRequest.getDeliverMan().getName());
+            }else{
+              deliveryManNameValue.setText("Not Assigned");  
+            }
+        }
+    }
+    
+      public void populateDeliveryManList(ArrayList<DeliveryMan> deliveryManList) {
+        if(workRequest.getDeliverMan() == null) {
+            assignDeliveryPerson.setVisible(true);
+             for (DeliveryMan deliveryMan : deliveryManList) {
+                assignDeliveryPerson.addItem(deliveryMan.getName());
+              }
+        }else{
+            assignDeliveryPerson.setVisible(false);
+        } 
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,19 +110,314 @@ public class orderDetailsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        deliveryManLabel = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        restaurantName = new javax.swing.JLabel();
+        deliveryManNameValue = new javax.swing.JLabel();
+        requestDate = new javax.swing.JLabel();
+        cartScrollPane1 = new javax.swing.JScrollPane();
+        tblOrderDetails = new javax.swing.JTable();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        totalPrice = new javax.swing.JLabel();
+        message = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        status = new javax.swing.JLabel();
+        btnBack1 = new javax.swing.JButton();
+        acceptOrder = new javax.swing.JButton();
+        assignDeliveryPerson = new javax.swing.JComboBox<>();
+        assignDeliveryPersonLabel = new javax.swing.JLabel();
+        addDeliveryPerson = new javax.swing.JButton();
+        customerFeedBackPanel = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        customerFeedbackField = new javax.swing.JTextArea();
+        customerFeedbackLabel = new javax.swing.JLabel();
+        declineOrder = new javax.swing.JButton();
+
+        jPanel1.setBackground(new java.awt.Color(240, 178, 62));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel4.setText("Restaurant Name");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 152, 130, -1));
+
+        deliveryManLabel.setText("Delivery Man Name");
+        jPanel1.add(deliveryManLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 118, 130, -1));
+
+        jLabel6.setText("Request Date");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 186, 117, -1));
+
+        restaurantName.setText("arun");
+        jPanel1.add(restaurantName, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 152, 213, -1));
+
+        deliveryManNameValue.setText("adarsh");
+        jPanel1.add(deliveryManNameValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 118, 186, -1));
+
+        requestDate.setText("<value>");
+        jPanel1.add(requestDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 186, 213, -1));
+
+        tblOrderDetails.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Item Name", "Item Qty", "Item Price"
+            }
+        ) {
+            Class[] types = new Class [] {
+                java.lang.String.class, java.lang.Integer.class, java.lang.Double.class
+            };
+            boolean[] canEdit = new boolean [] {
+                false, false, true
+            };
+
+            public Class getColumnClass(int columnIndex) {
+                return types [columnIndex];
+            }
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        cartScrollPane1.setViewportView(tblOrderDetails);
+
+        jPanel1.add(cartScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 275, 660, 190));
+
+        jLabel9.setText("Total");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 483, 50, -1));
+
+        jLabel10.setText("Message");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(347, 483, -1, -1));
+
+        totalPrice.setText("<value>");
+        jPanel1.add(totalPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 483, 127, -1));
+
+        message.setText("<value>");
+        jPanel1.add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(476, 483, 265, -1));
+
+        jLabel12.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel12.setText("ORDER DETAILS");
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 51, 660, -1));
+
+        jLabel14.setText("Status");
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 220, 103, -1));
+
+        status.setText("<value>");
+        jPanel1.add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 220, 213, -1));
+
+        btnBack1.setText("<Back");
+        btnBack1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBack1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnBack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 13, -1, -1));
+
+        acceptOrder.setText("Accept Order");
+        acceptOrder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                acceptOrderActionPerformed(evt);
+            }
+        });
+        jPanel1.add(acceptOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(319, 512, -1, -1));
+
+        assignDeliveryPerson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                assignDeliveryPersonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(assignDeliveryPerson, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 94, 137, -1));
+
+        assignDeliveryPersonLabel.setText("Assign Delivery Person");
+        jPanel1.add(assignDeliveryPersonLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 97, -1, -1));
+
+        addDeliveryPerson.setText("Add");
+        addDeliveryPerson.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                addDeliveryPersonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(addDeliveryPerson, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 93, -1, -1));
+
+        customerFeedBackPanel.setBackground(new java.awt.Color(240, 178, 62));
+
+        customerFeedbackField.setColumns(20);
+        customerFeedbackField.setRows(5);
+        jScrollPane1.setViewportView(customerFeedbackField);
+
+        customerFeedbackLabel.setText("Customer Feedback");
+
+        javax.swing.GroupLayout customerFeedBackPanelLayout = new javax.swing.GroupLayout(customerFeedBackPanel);
+        customerFeedBackPanel.setLayout(customerFeedBackPanelLayout);
+        customerFeedBackPanelLayout.setHorizontalGroup(
+            customerFeedBackPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, customerFeedBackPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(customerFeedbackLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        customerFeedBackPanelLayout.setVerticalGroup(
+            customerFeedBackPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, customerFeedBackPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(customerFeedBackPanelLayout.createSequentialGroup()
+                .addGap(21, 21, 21)
+                .addComponent(customerFeedbackLabel)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel1.add(customerFeedBackPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 544, 660, -1));
+
+        declineOrder.setText("Decline Order");
+        declineOrder.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                declineOrderMousePressed(evt);
+            }
+        });
+        jPanel1.add(declineOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(433, 512, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 890, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 890, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 692, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 679, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 13, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnBack1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBack1ActionPerformed
+        // TODO add your handling code here:
+        orderJPanel OrderJPanel = new orderJPanel(userProcessContainer,ecosystem, account);
+        userProcessContainer.add("OrderJPanel", OrderJPanel);
+        CardLayout layout = (CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnBack1ActionPerformed
+
+    private void acceptOrderActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_acceptOrderActionPerformed
+        // TODO add your handling code here:
+        if (workRequest.getStatus().equals("Ordered")) {
+            workRequest.setStatus("Preparing");
+            JOptionPane.showMessageDialog(null, " Order Accepted Successfully!!, Please assign delivery person");
+        }else if(workRequest.getStatus().equals("Preparing")){
+            workRequest.setStatus("Prepared");
+            if(workRequest.getDeliverMan() == null){
+                JOptionPane.showMessageDialog(null, " Order Prepared Successfully!!, Please assign delivery person");
+            }else{
+                JOptionPane.showMessageDialog(null, "Hurray, Delivery person will pick up the order in few minutes !!!");
+            }
+        }else if (workRequest.getStatus().equalsIgnoreCase("delivered")){
+            setVisibleEditable();
+        }else{
+            acceptOrder.setVisible(false);
+        }
+        changeButtonText();
+        status.setText(workRequest.getStatus());
+
+    }//GEN-LAST:event_acceptOrderActionPerformed
+
+    private void assignDeliveryPersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignDeliveryPersonActionPerformed
+        // TODO add your handling code here:
+        index = assignDeliveryPerson.getSelectedIndex();
+        //clear of the selected items
+
+    }//GEN-LAST:event_assignDeliveryPersonActionPerformed
+
+    private void addDeliveryPersonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addDeliveryPersonActionPerformed
+        // TODO add your handling code here:
+        if(index >= 0){
+            DeliveryMan deliveryMan = deliveryManDirectory.getDeliveryManList().get(index);
+            workRequest.setDeliverMan(deliveryMan);
+            JOptionPane.showMessageDialog(null, "Delivery person assigned successfully!!!");
+            populateDeliveryMan();
+        }
+    }//GEN-LAST:event_addDeliveryPersonActionPerformed
+
+    private void declineOrderMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_declineOrderMousePressed
+        declineOrder();
+    }//GEN-LAST:event_declineOrderMousePressed
+    private void declineOrder(){
+        workRequest.setStatus("Declined");
+        JOptionPane.showMessageDialog(null, "You have just declined the order, we will notify it to the customer!!");
+        changeButtonText();
+        status.setText(workRequest.getStatus());
+    }
+    
+    private void changeButtonText() {
+        switch(workRequest.getStatus()){
+            case "Ordered":
+                  acceptOrder.setText("Accept order");
+                  declineOrder.setVisible(true);
+                  break;
+            case "Preparing":
+                  acceptOrder.setText("Ready for delivery");
+                  declineOrder.setVisible(false);
+                  break;
+            default:
+                declineOrder.setVisible(false);
+                acceptOrder.setVisible(false);
+        }
+        populateDeliveryMan();
+    }
+    
+      private void setVisibleEditable(){
+        if(workRequest.getStatus().equalsIgnoreCase("delivered")){
+            customerFeedBackPanel.setVisible(true);
+            customerFeedbackField.setVisible(true);
+            customerFeedbackField.setEditable(true);
+            if(workRequest.getFeedbackbyCustomer() != null){
+                customerFeedbackField.setText(workRequest.getFeedbackbyCustomer());
+                customerFeedbackField.setEditable(false);
+            }
+        }else{
+            customerFeedBackPanel.setVisible(false);
+            customerFeedbackField.setVisible(false);
+            customerFeedbackField.setEditable(false);
+           
+        }
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton acceptOrder;
+    private javax.swing.JButton addDeliveryPerson;
+    private javax.swing.JComboBox<String> assignDeliveryPerson;
+    private javax.swing.JLabel assignDeliveryPersonLabel;
+    private javax.swing.JButton btnBack1;
+    private javax.swing.JScrollPane cartScrollPane1;
+    private javax.swing.JPanel customerFeedBackPanel;
+    private javax.swing.JTextArea customerFeedbackField;
+    private javax.swing.JLabel customerFeedbackLabel;
+    private javax.swing.JButton declineOrder;
+    private javax.swing.JLabel deliveryManLabel;
+    private javax.swing.JLabel deliveryManNameValue;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JLabel message;
+    private javax.swing.JLabel requestDate;
+    private javax.swing.JLabel restaurantName;
+    private javax.swing.JLabel status;
+    private javax.swing.JTable tblOrderDetails;
+    private javax.swing.JLabel totalPrice;
     // End of variables declaration//GEN-END:variables
 }

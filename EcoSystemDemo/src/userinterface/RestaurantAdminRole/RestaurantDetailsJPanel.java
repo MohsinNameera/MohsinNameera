@@ -4,18 +4,37 @@
  * and open the template in the editor.
  */
 package userinterface.RestaurantAdminRole;
+import Business.EcoSystem;
+import Business.Restaurant.Restaurant;
+import Business.UserAccount.UserAccount;
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
  * @author namir
  */
 public class RestaurantDetailsJPanel extends javax.swing.JPanel {
-
+    JPanel userProcessContainer;
+    EcoSystem ecosystem;
+    UserAccount userAccount;
+    Restaurant restaurant;
     /**
      * Creates new form RestaurantDetailsJPanel
      */
-    public RestaurantDetailsJPanel() {
+    public RestaurantDetailsJPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount userAccount) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.ecosystem = ecosystem;
+        this.userAccount = userAccount;
+        restaurant = (Restaurant)userAccount;
+        Show(restaurant);
+        confirmButton.setVisible(false);
+        resetButton.setVisible(false);
     }
 
     /**
@@ -27,19 +46,131 @@ public class RestaurantDetailsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
-        );
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        restaurantName = new javax.swing.JTextField();
+        updateButton = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        restaurantAddress = new javax.swing.JTextField();
+        restaurantPhone = new javax.swing.JTextField();
+        confirmButton = new javax.swing.JButton();
+        resetButton = new javax.swing.JButton();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel1.setBackground(new java.awt.Color(240, 178, 62));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("MANAGE RESTAURANT INFORMATION");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 53, 705, -1));
+
+        jLabel2.setText("Restaurant name");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 111, 122, -1));
+        jPanel1.add(restaurantName, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 108, 309, -1));
+
+        updateButton.setText("Update");
+        updateButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                updateButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(updateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 223, -1, -1));
+
+        jLabel3.setText("Restaurant Address");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 146, 122, -1));
+
+        jLabel4.setText("Restaurant Phone");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 186, 122, -1));
+        jPanel1.add(restaurantAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 143, 309, -1));
+
+        restaurantPhone.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                restaurantPhoneActionPerformed(evt);
+            }
+        });
+        jPanel1.add(restaurantPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 183, 309, -1));
+
+        confirmButton.setText("Confirm");
+        confirmButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                confirmButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(confirmButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(409, 223, -1, -1));
+
+        resetButton.setText("Reset");
+        resetButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                resetButtonActionPerformed(evt);
+            }
+        });
+        jPanel1.add(resetButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(493, 223, -1, -1));
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, 0, 900, 540));
     }// </editor-fold>//GEN-END:initComponents
 
+    private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed
+        // TODO add your handling code here:
+        confirmButton.setVisible(true);
+        resetButton.setVisible(true);
+        setVisibleEditable(true);
+
+        //populateTable();
+    }//GEN-LAST:event_updateButtonActionPerformed
+
+    private void restaurantPhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_restaurantPhoneActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_restaurantPhoneActionPerformed
+
+    private void confirmButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmButtonActionPerformed
+        // TODO add your handling code here:
+        restaurant.setName(restaurantName.getText());
+        restaurant.setAddress(restaurantAddress.getText());
+        restaurant.setPhone(restaurantPhone.getText());
+        setVisibleEditable(false);
+    }//GEN-LAST:event_confirmButtonActionPerformed
+
+    private void resetButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_resetButtonActionPerformed
+        // TODO add your handling code here:
+        restaurantName.setText("");
+        restaurantAddress.setText("");
+        restaurantPhone.setText("");
+
+    }//GEN-LAST:event_resetButtonActionPerformed
+    private void setVisibleEditable(boolean value) {
+        restaurantName.setEditable(value);
+        restaurantAddress.setEditable(value);
+        restaurantPhone.setEditable(value);
+       restaurantName.setEnabled(value);
+       restaurantAddress.setEnabled(value);
+       restaurantPhone.setEnabled(value);
+        
+    }
+
+    private void Show(Restaurant restaurant) {
+        System.out.println("Shivi");
+        setVisibleEditable(false);
+        restaurantName.setText(restaurant.getName());
+        restaurantAddress.setText(restaurant.getAddress());
+        restaurantPhone.setText(restaurant.getPhone());
+        
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton confirmButton;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton resetButton;
+    private javax.swing.JTextField restaurantAddress;
+    private javax.swing.JTextField restaurantName;
+    private javax.swing.JTextField restaurantPhone;
+    private javax.swing.JButton updateButton;
     // End of variables declaration//GEN-END:variables
 }

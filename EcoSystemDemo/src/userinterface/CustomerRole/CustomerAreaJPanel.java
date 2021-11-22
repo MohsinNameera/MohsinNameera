@@ -7,7 +7,7 @@ package userinterface.CustomerRole;
 import Business.EcoSystem;
 
 import Business.UserAccount.UserAccount;
-//import Business.WorkQueue.WorkRequest;
+import java.awt.Color;
 import java.awt.CardLayout;
 import javax.swing.JPanel;
 
@@ -30,14 +30,9 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;
         this.ecosystem = ecosystem;
-        //valueLabel.setText(enterprise.getName());
-        populateRequestTable();
+        OrderPlace();
     }
     
-    public void populateRequestTable(){
-        
-    }
-
     
     /**
      * This method is called from within the constructor to initialize the form.
@@ -48,123 +43,166 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jScrollPane1 = new javax.swing.JScrollPane();
-        workRequestJTable = new javax.swing.JTable();
-        requestTestJButton = new javax.swing.JButton();
-        refreshTestJButton = new javax.swing.JButton();
-        enterpriseLabel = new javax.swing.JLabel();
-        valueLabel = new javax.swing.JLabel();
+        rightSystemAdminPanel = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        placeOrderButtonPanel = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        placeOrderLabel = new javax.swing.JLabel();
+        orderStatusButtonPanel = new javax.swing.JPanel();
+        jLabel4 = new javax.swing.JLabel();
+        orderStatusLabel = new javax.swing.JLabel();
 
-        workRequestJTable.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
-            },
-            new String [] {
-                "Message", "Receiver", "Status", "Result"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.String.class, java.lang.String.class, java.lang.String.class, java.lang.String.class
-            };
-            boolean[] canEdit = new boolean [] {
-                false, false, false, false
-            };
+        rightSystemAdminPanel.setPreferredSize(new java.awt.Dimension(940, 808));
+        rightSystemAdminPanel.setLayout(new java.awt.CardLayout());
 
-            public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
-            }
+        jPanel1.setBackground(new java.awt.Color(31, 50, 97));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-            public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
-            }
-        });
-        jScrollPane1.setViewportView(workRequestJTable);
-        if (workRequestJTable.getColumnModel().getColumnCount() > 0) {
-            workRequestJTable.getColumnModel().getColumn(0).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(1).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(2).setResizable(false);
-            workRequestJTable.getColumnModel().getColumn(3).setResizable(false);
-        }
-
-        requestTestJButton.setText("Request Test");
-        requestTestJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                requestTestJButtonActionPerformed(evt);
+        placeOrderButtonPanel.setBackground(new java.awt.Color(31, 50, 97));
+        placeOrderButtonPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                placeOrderButtonPanelMousePressed(evt);
             }
         });
 
-        refreshTestJButton.setText("Refresh");
-        refreshTestJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                refreshTestJButtonActionPerformed(evt);
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        placeOrderLabel.setForeground(new java.awt.Color(240, 178, 62));
+        placeOrderLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        placeOrderLabel.setText("Place Order");
+        placeOrderLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                placeOrderLabelMousePressed(evt);
             }
         });
 
-        enterpriseLabel.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        enterpriseLabel.setText("EnterPrise :");
+        javax.swing.GroupLayout placeOrderButtonPanelLayout = new javax.swing.GroupLayout(placeOrderButtonPanel);
+        placeOrderButtonPanel.setLayout(placeOrderButtonPanelLayout);
+        placeOrderButtonPanelLayout.setHorizontalGroup(
+            placeOrderButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(placeOrderButtonPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(placeOrderLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 14, Short.MAX_VALUE))
+        );
+        placeOrderButtonPanelLayout.setVerticalGroup(
+            placeOrderButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(placeOrderButtonPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(placeOrderButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(placeOrderLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 36, Short.MAX_VALUE))
+                .addContainerGap())
+        );
 
-        valueLabel.setText("<value>");
+        jPanel1.add(placeOrderButtonPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 280, -1));
+
+        orderStatusButtonPanel.setBackground(new java.awt.Color(31, 50, 97));
+        orderStatusButtonPanel.setPreferredSize(new java.awt.Dimension(264, 48));
+        orderStatusButtonPanel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                orderStatusButtonPanelMousePressed(evt);
+            }
+        });
+
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        orderStatusLabel.setForeground(new java.awt.Color(240, 178, 62));
+        orderStatusLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        orderStatusLabel.setText("Order Status");
+        orderStatusLabel.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                orderStatusLabelMousePressed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout orderStatusButtonPanelLayout = new javax.swing.GroupLayout(orderStatusButtonPanel);
+        orderStatusButtonPanel.setLayout(orderStatusButtonPanelLayout);
+        orderStatusButtonPanelLayout.setHorizontalGroup(
+            orderStatusButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(orderStatusButtonPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(orderStatusLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        orderStatusButtonPanelLayout.setVerticalGroup(
+            orderStatusButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(orderStatusButtonPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(orderStatusButtonPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(orderStatusLabel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        jPanel1.add(orderStatusButtonPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 280, 50));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(179, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 346, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(165, 165, 165))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(requestTestJButton)
-                        .addGap(86, 86, 86))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(30, 30, 30)
-                .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(refreshTestJButton)
-                .addGap(103, 103, 103))
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(rightSystemAdminPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(valueLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(refreshTestJButton)
-                        .addComponent(enterpriseLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
-                .addComponent(requestTestJButton)
-                .addContainerGap(202, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(rightSystemAdminPanel, javax.swing.GroupLayout.DEFAULT_SIZE, 660, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void requestTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_requestTestJButtonActionPerformed
-        
-        
-        
-    }//GEN-LAST:event_requestTestJButtonActionPerformed
+    private void placeOrderLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_placeOrderLabelMousePressed
+        OrderPlace();
+    }//GEN-LAST:event_placeOrderLabelMousePressed
+    private void OrderPlace() {
+        // TODO add your handling code here:
+        placeOrderButtonPanel.setBackground(new Color(56, 90, 174));
+        orderStatusButtonPanel.setBackground(new Color(31, 50, 97));
 
-    private void refreshTestJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_refreshTestJButtonActionPerformed
+        OrderPlaceJPanel placeOrderJPanel = new OrderPlaceJPanel(rightSystemAdminPanel, userAccount, ecosystem);
+        rightSystemAdminPanel.add("PlaceOrderJPanel", placeOrderJPanel);
+        CardLayout layout = (CardLayout) rightSystemAdminPanel.getLayout();
+        layout.next(rightSystemAdminPanel);
 
-        populateRequestTable();
+    }
+    private void placeOrderButtonPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_placeOrderButtonPanelMousePressed
+        OrderPlace();
+    }//GEN-LAST:event_placeOrderButtonPanelMousePressed
+
+    private void orderStatusLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderStatusLabelMousePressed
+        orderStatus();
+    }//GEN-LAST:event_orderStatusLabelMousePressed
+
+    private void orderStatus() {
+        // TODO add your handling code here:
+        orderStatusButtonPanel.setBackground(new Color(56, 90, 174));
+        placeOrderButtonPanel.setBackground(new Color(31, 50, 97));
         
-    }//GEN-LAST:event_refreshTestJButtonActionPerformed
+        OrderIStatusJPanel orderStatusJPanel = new OrderIStatusJPanel(rightSystemAdminPanel, ecosystem, userAccount);
+        rightSystemAdminPanel.add("OrderStatusJPanel", orderStatusJPanel);
+        CardLayout layout = (CardLayout)rightSystemAdminPanel.getLayout();
+        layout.next(rightSystemAdminPanel);
+    }
+
+    private void orderStatusButtonPanelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_orderStatusButtonPanelMousePressed
+        // TODO add your handling code here:
+        orderStatus();
+    }//GEN-LAST:event_orderStatusButtonPanelMousePressed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel enterpriseLabel;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JButton refreshTestJButton;
-    private javax.swing.JButton requestTestJButton;
-    private javax.swing.JLabel valueLabel;
-    private javax.swing.JTable workRequestJTable;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel orderStatusButtonPanel;
+    private javax.swing.JLabel orderStatusLabel;
+    private javax.swing.JPanel placeOrderButtonPanel;
+    private javax.swing.JLabel placeOrderLabel;
+    private javax.swing.JPanel rightSystemAdminPanel;
     // End of variables declaration//GEN-END:variables
 }

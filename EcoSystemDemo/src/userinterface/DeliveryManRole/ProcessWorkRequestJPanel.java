@@ -4,8 +4,15 @@
  */
 package userinterface.DeliveryManRole;
 
+import Business.DeliveryMan.DeliveryManDirectory;
+import Business.EcoSystem;
+import Business.UserAccount.UserAccount;
+import Business.WorkQueue.productWithQty;
+import Business.WorkQueue.orderWorkRequest;
+import Business.WorkQueue.WorkRequest;
 import java.awt.CardLayout;
 import java.awt.Component;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 /**
@@ -17,13 +24,48 @@ import javax.swing.JPanel;
 public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
 
     JPanel userProcessContainer;
+    EcoSystem ecosystem;
+    UserAccount account;
+    orderWorkRequest workRequest;
+
     /**
      * Creates new form ProcessWorkRequestJPanel
      */
-    public ProcessWorkRequestJPanel(JPanel userProcessContainer) {
+    public ProcessWorkRequestJPanel(JPanel userProcessContainer, EcoSystem ecosystem, UserAccount account, orderWorkRequest workRequest) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.ecosystem = ecosystem;
+        this.account = account;
+        this.workRequest = workRequest;
+        customerAddressValue.setEditable(false);
+        restaurantAddressValue.setEditable(false);
+        changeButtonText();
+        Show();
         
     }
+        private void Show() {
+
+        restaurantNameValue.setText(workRequest.getRestaurant().getName());
+        restaurantAddressValue.setText(workRequest.getRestaurant().getAddress());
+        customerNameValue.setText(workRequest.getCustomer().getName());
+        customerAddressValue.setText(workRequest.getCustomer().getAddress());
+        status.setText(workRequest.getStatus());
+
+    }
+
+    private void changeButtonText() {
+        switch (workRequest.getStatus()) {
+            case "Prepared":
+                btnStatus.setText("Pick Order");
+                break;
+            case "Out for delivery":
+                btnStatus.setText("Complete Delivery");
+                break;
+            default:
+                btnStatus.setVisible(false);
+        }
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -34,19 +76,30 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        submitJButton = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        resultJTextField = new javax.swing.JTextField();
         backJButton = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        restaurantNameValue = new javax.swing.JLabel();
+        customerNameValue = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        btnStatus = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
+        status = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        customerAddressValue = new javax.swing.JTextArea();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        restaurantAddressValue = new javax.swing.JTextArea();
 
-        submitJButton.setText("Submit Result");
-        submitJButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                submitJButtonActionPerformed(evt);
-            }
-        });
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setText("Result");
+        jPanel1.setBackground(new java.awt.Color(240, 178, 62));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setText("Restaurant Name");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 54, 112, -1));
 
         backJButton.setText("Back");
         backJButton.addActionListener(new java.awt.event.ActionListener() {
@@ -54,61 +107,95 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
                 backJButtonActionPerformed(evt);
             }
         });
+        jPanel1.add(backJButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(12, 15, -1, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(53, 53, 53)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(backJButton)
-                    .addComponent(jLabel1))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(46, 46, 46)
-                        .addComponent(resultJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 88, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 132, Short.MAX_VALUE)
-                        .addComponent(submitJButton)
-                        .addGap(63, 63, 63))))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(resultJTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(44, 44, 44)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(submitJButton)
-                    .addComponent(backJButton))
-                .addContainerGap(169, Short.MAX_VALUE))
-        );
+        jLabel2.setText("Restaurant Address");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 88, -1, -1));
+
+        jLabel3.setText("Customer Name");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 191, 112, -1));
+
+        jLabel4.setText("Customer Address");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 225, 112, -1));
+
+        restaurantNameValue.setText("<Value>");
+        jPanel1.add(restaurantNameValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 54, 244, -1));
+
+        customerNameValue.setText("<Value>");
+        jPanel1.add(customerNameValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 191, 166, -1));
+
+        jLabel9.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel9.setText("ORDER DETAILS");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 13, 700, -1));
+
+        btnStatus.setText("Pick Order");
+        btnStatus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnStatusActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 373, -1, -1));
+
+        jLabel5.setText("Status");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 339, 112, -1));
+
+        status.setText("<Value>");
+        jPanel1.add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 339, 166, -1));
+
+        customerAddressValue.setColumns(20);
+        customerAddressValue.setRows(5);
+        jScrollPane1.setViewportView(customerAddressValue);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 225, -1, -1));
+
+        restaurantAddressValue.setColumns(20);
+        restaurantAddressValue.setRows(5);
+        jScrollPane2.setViewportView(restaurantAddressValue);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 88, -1, -1));
+
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, 1, 980, 630));
     }// </editor-fold>//GEN-END:initComponents
 
     private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
 
-        userProcessContainer.remove(this);
-        Component[] componentArray = userProcessContainer.getComponents();
-        Component component = componentArray[componentArray.length - 1];
-        DeliveryManWorkAreaJPanel dwjp = (DeliveryManWorkAreaJPanel) component;
-        dwjp.populateTable();
-        
+        DeliveryManWorkAreaJPanel deliveryManWorkAreaJPanel = new DeliveryManWorkAreaJPanel(userProcessContainer, account, ecosystem);
+        userProcessContainer.add("DeliveryManWorkAreaJPanel", deliveryManWorkAreaJPanel);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_backJButtonActionPerformed
 
-    private void submitJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_submitJButtonActionPerformed
-       
-    }//GEN-LAST:event_submitJButtonActionPerformed
+    private void btnStatusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnStatusActionPerformed
+        if (workRequest.getStatus().equals("Prepared")) {
+            workRequest.setStatus("Out for delivery");
+            JOptionPane.showMessageDialog(null, "Thanks for picking up the order, please deliver it at the customer's address");
+        } else if (workRequest.getStatus().equals("Out for delivery")) {
+            workRequest.setStatus("Delivered");
+            JOptionPane.showMessageDialog(null, "Thanks for Delivering the order :)");
+        } else {
+            btnStatus.setVisible(false);
+        }
+        changeButtonText();
+        status.setText(workRequest.getStatus());
+    }//GEN-LAST:event_btnStatusActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton backJButton;
+    private javax.swing.JButton btnStatus;
+    private javax.swing.JTextArea customerAddressValue;
+    private javax.swing.JLabel customerNameValue;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField resultJTextField;
-    private javax.swing.JButton submitJButton;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextArea restaurantAddressValue;
+    private javax.swing.JLabel restaurantNameValue;
+    private javax.swing.JLabel status;
     // End of variables declaration//GEN-END:variables
 }
