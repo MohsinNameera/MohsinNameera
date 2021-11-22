@@ -137,26 +137,33 @@ public class orderDetailsJPanel extends javax.swing.JPanel {
         customerFeedbackLabel = new javax.swing.JLabel();
         declineOrder = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(240, 178, 62));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1200, 900));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jLabel4.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
         jLabel4.setText("Restaurant Name");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 152, 130, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 130, -1));
 
+        deliveryManLabel.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
         deliveryManLabel.setText("Delivery Man Name");
-        jPanel1.add(deliveryManLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 118, 130, -1));
+        jPanel1.add(deliveryManLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 130, -1));
 
+        jLabel6.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
         jLabel6.setText("Request Date");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 186, 117, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 200, 117, -1));
 
-        restaurantName.setText("arun");
-        jPanel1.add(restaurantName, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 152, 213, -1));
+        restaurantName.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        restaurantName.setText("mo");
+        jPanel1.add(restaurantName, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 170, 213, -1));
 
-        deliveryManNameValue.setText("adarsh");
-        jPanel1.add(deliveryManNameValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 118, 186, -1));
+        deliveryManNameValue.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        deliveryManNameValue.setText("nam");
+        jPanel1.add(deliveryManNameValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 140, 186, -1));
 
+        requestDate.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
         requestDate.setText("<value>");
-        jPanel1.add(requestDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 186, 213, -1));
+        jPanel1.add(requestDate, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 200, 213, -1));
 
         tblOrderDetails.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -183,31 +190,40 @@ public class orderDetailsJPanel extends javax.swing.JPanel {
         });
         cartScrollPane1.setViewportView(tblOrderDetails);
 
-        jPanel1.add(cartScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 275, 660, 190));
+        jPanel1.add(cartScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 660, 190));
 
+        jLabel9.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
         jLabel9.setText("Total");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 483, 50, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 470, 50, -1));
 
+        jLabel10.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
         jLabel10.setText("Message");
-        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(347, 483, -1, -1));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 470, -1, -1));
 
+        totalPrice.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
         totalPrice.setText("<value>");
-        jPanel1.add(totalPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(194, 483, 127, -1));
+        jPanel1.add(totalPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 470, 127, -1));
 
+        message.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
         message.setText("<value>");
-        jPanel1.add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(476, 483, 265, -1));
+        jPanel1.add(message, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 470, 190, -1));
 
-        jLabel12.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 24)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(51, 153, 0));
         jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel12.setText("ORDER DETAILS");
-        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 51, 660, -1));
+        jPanel1.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 660, -1));
 
+        jLabel14.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
         jLabel14.setText("Status");
-        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 220, 103, -1));
+        jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 103, -1));
 
+        status.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
         status.setText("<value>");
-        jPanel1.add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 220, 213, -1));
+        jPanel1.add(status, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 230, 213, -1));
 
+        btnBack1.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        btnBack1.setForeground(new java.awt.Color(51, 153, 0));
         btnBack1.setText("<Back");
         btnBack1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -216,72 +232,66 @@ public class orderDetailsJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(btnBack1, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 13, -1, -1));
 
+        acceptOrder.setBackground(new java.awt.Color(0, 0, 0));
+        acceptOrder.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        acceptOrder.setForeground(new java.awt.Color(0, 153, 0));
         acceptOrder.setText("Accept Order");
         acceptOrder.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 acceptOrderActionPerformed(evt);
             }
         });
-        jPanel1.add(acceptOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(319, 512, -1, -1));
+        jPanel1.add(acceptOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 500, -1, -1));
 
+        assignDeliveryPerson.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
         assignDeliveryPerson.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 assignDeliveryPersonActionPerformed(evt);
             }
         });
-        jPanel1.add(assignDeliveryPerson, new org.netbeans.lib.awtextra.AbsoluteConstraints(306, 94, 137, -1));
+        jPanel1.add(assignDeliveryPerson, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 90, 137, -1));
 
+        assignDeliveryPersonLabel.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
         assignDeliveryPersonLabel.setText("Assign Delivery Person");
-        jPanel1.add(assignDeliveryPersonLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 97, -1, -1));
+        jPanel1.add(assignDeliveryPersonLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 100, -1, -1));
 
+        addDeliveryPerson.setBackground(new java.awt.Color(0, 0, 0));
+        addDeliveryPerson.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        addDeliveryPerson.setForeground(new java.awt.Color(0, 153, 0));
         addDeliveryPerson.setText("Add");
         addDeliveryPerson.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addDeliveryPersonActionPerformed(evt);
             }
         });
-        jPanel1.add(addDeliveryPerson, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 93, -1, -1));
+        jPanel1.add(addDeliveryPerson, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 90, -1, -1));
 
-        customerFeedBackPanel.setBackground(new java.awt.Color(240, 178, 62));
+        customerFeedBackPanel.setBackground(new java.awt.Color(0, 0, 0));
+        customerFeedBackPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         customerFeedbackField.setColumns(20);
         customerFeedbackField.setRows(5);
         jScrollPane1.setViewportView(customerFeedbackField);
 
+        customerFeedBackPanel.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(172, 13, 520, 100));
+
+        customerFeedbackLabel.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        customerFeedbackLabel.setForeground(new java.awt.Color(51, 153, 0));
         customerFeedbackLabel.setText("Customer Feedback");
+        customerFeedBackPanel.add(customerFeedbackLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 50, 136, -1));
 
-        javax.swing.GroupLayout customerFeedBackPanelLayout = new javax.swing.GroupLayout(customerFeedBackPanel);
-        customerFeedBackPanel.setLayout(customerFeedBackPanelLayout);
-        customerFeedBackPanelLayout.setHorizontalGroup(
-            customerFeedBackPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, customerFeedBackPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(customerFeedbackLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        customerFeedBackPanelLayout.setVerticalGroup(
-            customerFeedBackPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, customerFeedBackPanelLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-            .addGroup(customerFeedBackPanelLayout.createSequentialGroup()
-                .addGap(21, 21, 21)
-                .addComponent(customerFeedbackLabel)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
+        jPanel1.add(customerFeedBackPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 544, 710, 130));
 
-        jPanel1.add(customerFeedBackPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(96, 544, 660, -1));
-
+        declineOrder.setBackground(new java.awt.Color(0, 0, 0));
+        declineOrder.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        declineOrder.setForeground(new java.awt.Color(0, 153, 0));
         declineOrder.setText("Decline Order");
         declineOrder.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 declineOrderMousePressed(evt);
             }
         });
-        jPanel1.add(declineOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(433, 512, -1, -1));
+        jPanel1.add(declineOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 500, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

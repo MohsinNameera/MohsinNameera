@@ -51,14 +51,16 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
         orderStatusButtonPanel = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         orderStatusLabel = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
+        rightSystemAdminPanel.setBackground(new java.awt.Color(0, 0, 0));
         rightSystemAdminPanel.setPreferredSize(new java.awt.Dimension(940, 808));
         rightSystemAdminPanel.setLayout(new java.awt.CardLayout());
 
-        jPanel1.setBackground(new java.awt.Color(31, 50, 97));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        placeOrderButtonPanel.setBackground(new java.awt.Color(31, 50, 97));
+        placeOrderButtonPanel.setBackground(new java.awt.Color(0, 0, 0));
         placeOrderButtonPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 placeOrderButtonPanelMousePressed(evt);
@@ -67,7 +69,8 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        placeOrderLabel.setForeground(new java.awt.Color(240, 178, 62));
+        placeOrderLabel.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        placeOrderLabel.setForeground(new java.awt.Color(51, 153, 0));
         placeOrderLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         placeOrderLabel.setText("Place Order");
         placeOrderLabel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -99,7 +102,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
 
         jPanel1.add(placeOrderButtonPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 280, -1));
 
-        orderStatusButtonPanel.setBackground(new java.awt.Color(31, 50, 97));
+        orderStatusButtonPanel.setBackground(new java.awt.Color(0, 0, 0));
         orderStatusButtonPanel.setPreferredSize(new java.awt.Dimension(264, 48));
         orderStatusButtonPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -109,7 +112,8 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        orderStatusLabel.setForeground(new java.awt.Color(240, 178, 62));
+        orderStatusLabel.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        orderStatusLabel.setForeground(new java.awt.Color(51, 153, 0));
         orderStatusLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         orderStatusLabel.setText("Order Status");
         orderStatusLabel.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -141,6 +145,9 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
 
         jPanel1.add(orderStatusButtonPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 310, 280, 50));
 
+        jLabel2.setText("jLabel2");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -162,8 +169,8 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
     }//GEN-LAST:event_placeOrderLabelMousePressed
     private void OrderPlace() {
         // TODO add your handling code here:
-        placeOrderButtonPanel.setBackground(new Color(56, 90, 174));
-        orderStatusButtonPanel.setBackground(new Color(31, 50, 97));
+        placeOrderButtonPanel.setBackground(new Color(255, 255, 255));
+        orderStatusButtonPanel.setBackground(new Color(0, 0, 0));
 
         OrderPlaceJPanel placeOrderJPanel = new OrderPlaceJPanel(rightSystemAdminPanel, userAccount, ecosystem);
         rightSystemAdminPanel.add("PlaceOrderJPanel", placeOrderJPanel);
@@ -181,8 +188,8 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
 
     private void orderStatus() {
         // TODO add your handling code here:
-        orderStatusButtonPanel.setBackground(new Color(56, 90, 174));
-        placeOrderButtonPanel.setBackground(new Color(31, 50, 97));
+        orderStatusButtonPanel.setBackground(new Color(255, 255, 255));
+        placeOrderButtonPanel.setBackground(new Color(0, 0, 0));
         
         OrderIStatusJPanel orderStatusJPanel = new OrderIStatusJPanel(rightSystemAdminPanel, ecosystem, userAccount);
         rightSystemAdminPanel.add("OrderStatusJPanel", orderStatusJPanel);
@@ -197,6 +204,7 @@ public class CustomerAreaJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel orderStatusButtonPanel;

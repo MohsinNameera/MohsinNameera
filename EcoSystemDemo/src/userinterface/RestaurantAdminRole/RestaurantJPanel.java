@@ -46,6 +46,7 @@ public class RestaurantJPanel extends javax.swing.JPanel {
         manageInfoButtonPanel = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         manageInfoButtonLabel = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         rightSystemAdminPanel = new javax.swing.JPanel();
 
         setBackground(new java.awt.Color(0, 0, 0));
@@ -54,7 +55,7 @@ public class RestaurantJPanel extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        manageOrdersButtonPanel.setBackground(new java.awt.Color(31, 50, 97));
+        manageOrdersButtonPanel.setBackground(new java.awt.Color(0, 0, 0));
         manageOrdersButtonPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 manageOrdersButtonPanelMousePressed(evt);
@@ -96,7 +97,7 @@ public class RestaurantJPanel extends javax.swing.JPanel {
 
         jPanel1.add(manageOrdersButtonPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 280, -1));
 
-        manageMenuButtonPanel.setBackground(new java.awt.Color(31, 50, 97));
+        manageMenuButtonPanel.setBackground(new java.awt.Color(0, 0, 0));
         manageMenuButtonPanel.setPreferredSize(new java.awt.Dimension(264, 48));
         manageMenuButtonPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
@@ -139,7 +140,7 @@ public class RestaurantJPanel extends javax.swing.JPanel {
 
         jPanel1.add(manageMenuButtonPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 280, 50));
 
-        manageInfoButtonPanel.setBackground(new java.awt.Color(31, 50, 97));
+        manageInfoButtonPanel.setBackground(new java.awt.Color(0, 0, 0));
         manageInfoButtonPanel.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mousePressed(java.awt.event.MouseEvent evt) {
                 manageInfoButtonPanelMousePressed(evt);
@@ -175,12 +176,16 @@ public class RestaurantJPanel extends javax.swing.JPanel {
 
         jPanel1.add(manageInfoButtonPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 360, 280, 50));
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/rest.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 70, 200, -1));
+
         add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 670));
 
         rightSystemAdminPanel.setBackground(new java.awt.Color(0, 0, 0));
-        rightSystemAdminPanel.setPreferredSize(new java.awt.Dimension(940, 808));
+        rightSystemAdminPanel.setPreferredSize(new java.awt.Dimension(1200, 900));
         rightSystemAdminPanel.setLayout(new java.awt.CardLayout());
-        add(rightSystemAdminPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 710, -1));
+        add(rightSystemAdminPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 0, 710, 670));
     }// </editor-fold>//GEN-END:initComponents
 
     private void manageOrdersButtonLabelMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_manageOrdersButtonLabelMousePressed
@@ -239,6 +244,7 @@ public class RestaurantJPanel extends javax.swing.JPanel {
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;

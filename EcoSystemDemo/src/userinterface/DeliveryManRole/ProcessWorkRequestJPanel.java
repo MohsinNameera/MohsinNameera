@@ -125,9 +125,11 @@ public class ProcessWorkRequestJPanel extends javax.swing.JPanel {
         jPanel1.add(customerNameValue, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 191, 166, -1));
 
         jLabel9.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(51, 153, 0));
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel9.setText("ORDER DETAILS");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(115, 13, 700, -1));
+        jLabel9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 255, 255)));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, 230, -1));
 
         btnStatus.setText("Pick Order");
         btnStatus.addActionListener(new java.awt.event.ActionListener() {

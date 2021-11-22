@@ -142,7 +142,7 @@ public class SystemAdminWorkAreaJPanel extends javax.swing.JPanel {
         systemAdminPanel.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 280, 840));
 
         SystemAdminPanelRight.setBackground(new java.awt.Color(0, 0, 0));
-        SystemAdminPanelRight.setPreferredSize(new java.awt.Dimension(940, 808));
+        SystemAdminPanelRight.setPreferredSize(new java.awt.Dimension(1200, 900));
         SystemAdminPanelRight.setLayout(new java.awt.CardLayout());
         systemAdminPanel.add(SystemAdminPanelRight, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, -2, 1030, 840));
 

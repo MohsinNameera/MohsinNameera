@@ -84,9 +84,11 @@ public class MainJFrame extends javax.swing.JFrame {
         loginButton = new javax.swing.JLabel();
         cancelButton = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
+        setMinimumSize(new java.awt.Dimension(1100, 831));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         leftPanel.setBackground(new java.awt.Color(0, 0, 0));
@@ -229,6 +231,10 @@ public class MainJFrame extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Uber-Eats-Transparent - Copy.png"))); // NOI18N
         loginJPanel.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 90, 240, 170));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/6b1525302df7a2226bdd0b586712110a - Copy.gif"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        loginJPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 510, 800, 320));
+
         getContentPane().add(loginJPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         pack();
@@ -318,6 +324,7 @@ private void logout() {
     private javax.swing.JLabel cancelButton;
     private javax.swing.JPanel container1;
     private javax.swing.JLabel greetingUserLabel;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

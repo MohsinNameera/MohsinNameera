@@ -61,15 +61,20 @@ public class menuJPanel extends javax.swing.JPanel {
         btnAddItem = new javax.swing.JButton();
         btnUpdateItem = new javax.swing.JButton();
 
+        setMinimumSize(new java.awt.Dimension(500, 580));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(240, 178, 62));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setMinimumSize(new java.awt.Dimension(500, 250));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1200, 900));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 153, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("MANAGE MENU");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 41, 798, -1));
+        jLabel1.setText("MENU");
+        jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 20, 200, -1));
 
         tblMenu.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -96,33 +101,43 @@ public class menuJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tblMenu);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(22, 90, 798, 207));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 80, 798, 207));
 
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 153, 0));
         jLabel2.setText("Item Name");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 313, -1, -1));
-        jPanel1.add(itemName, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 310, 337, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 330, -1, -1));
+        jPanel1.add(itemName, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 320, 250, 30));
 
+        jLabel3.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 153, 0));
         jLabel3.setText("Item Price");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 348, -1, -1));
-        jPanel1.add(itemPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(234, 345, 337, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 380, -1, -1));
+        jPanel1.add(itemPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 380, 250, 30));
 
+        btnAddItem.setBackground(new java.awt.Color(255, 255, 255));
+        btnAddItem.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        btnAddItem.setForeground(new java.awt.Color(51, 153, 0));
         btnAddItem.setText("Add Item");
         btnAddItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddItemActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAddItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 385, 163, -1));
+        jPanel1.add(btnAddItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 460, 163, -1));
 
+        btnUpdateItem.setBackground(new java.awt.Color(255, 255, 255));
+        btnUpdateItem.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        btnUpdateItem.setForeground(new java.awt.Color(51, 153, 0));
         btnUpdateItem.setText("Update");
         btnUpdateItem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnUpdateItemActionPerformed(evt);
             }
         });
-        jPanel1.add(btnUpdateItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 385, 156, -1));
+        jPanel1.add(btnUpdateItem, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 460, 156, -1));
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 917, 580));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, 680));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddItemActionPerformed

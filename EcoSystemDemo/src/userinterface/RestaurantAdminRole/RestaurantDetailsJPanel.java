@@ -60,57 +60,75 @@ public class RestaurantDetailsJPanel extends javax.swing.JPanel {
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(240, 178, 62));
+        jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1200, 800));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 18)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Times New Roman", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 153, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("MANAGE RESTAURANT INFORMATION");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 53, 705, -1));
+        jLabel1.setText(" RESTAURANT INFORMATION");
+        jLabel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 20, 430, -1));
 
+        jLabel2.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(51, 153, 0));
         jLabel2.setText("Restaurant name");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 111, 122, -1));
-        jPanel1.add(restaurantName, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 108, 309, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 140, 122, -1));
+        jPanel1.add(restaurantName, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 140, 309, -1));
 
+        updateButton.setBackground(new java.awt.Color(255, 255, 255));
+        updateButton.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        updateButton.setForeground(new java.awt.Color(51, 153, 0));
         updateButton.setText("Update");
         updateButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 updateButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(updateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 223, -1, -1));
+        jPanel1.add(updateButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, -1, -1));
 
+        jLabel3.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(51, 153, 0));
         jLabel3.setText("Restaurant Address");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 146, 122, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, 122, -1));
 
+        jLabel4.setFont(new java.awt.Font("Tw Cen MT Condensed", 0, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(51, 153, 0));
         jLabel4.setText("Restaurant Phone");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 186, 122, -1));
-        jPanel1.add(restaurantAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 143, 309, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, 122, -1));
+        jPanel1.add(restaurantAddress, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 190, 309, -1));
 
         restaurantPhone.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 restaurantPhoneActionPerformed(evt);
             }
         });
-        jPanel1.add(restaurantPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(329, 183, 309, -1));
+        jPanel1.add(restaurantPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 240, 309, -1));
 
+        confirmButton.setBackground(new java.awt.Color(255, 255, 255));
+        confirmButton.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        confirmButton.setForeground(new java.awt.Color(51, 153, 0));
         confirmButton.setText("Confirm");
         confirmButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 confirmButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(confirmButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(409, 223, -1, -1));
+        jPanel1.add(confirmButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 340, -1, -1));
 
+        resetButton.setBackground(new java.awt.Color(255, 255, 255));
+        resetButton.setFont(new java.awt.Font("Tw Cen MT Condensed", 1, 18)); // NOI18N
+        resetButton.setForeground(new java.awt.Color(51, 153, 0));
         resetButton.setText("Reset");
         resetButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 resetButtonActionPerformed(evt);
             }
         });
-        jPanel1.add(resetButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(493, 223, -1, -1));
+        jPanel1.add(resetButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 340, -1, -1));
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, 0, 900, 540));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, 0, 1040, 680));
     }// </editor-fold>//GEN-END:initComponents
 
     private void updateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_updateButtonActionPerformed

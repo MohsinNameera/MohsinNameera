@@ -80,6 +80,7 @@ public class RestauranT extends javax.swing.JPanel {
         restaurantPhone = new javax.swing.JTextField();
 
         jPanel1.setBackground(new java.awt.Color(0, 0, 0));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1200, 900));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         tblRestaurantAdmin.setModel(new javax.swing.table.DefaultTableModel(
